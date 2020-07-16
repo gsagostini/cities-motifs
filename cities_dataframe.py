@@ -1,4 +1,4 @@
-'''                    Creating the dataframe of cities                    '''
+'''                   Creating the dataframe of cities                    '''
 
 #This script reads a list of cities and creates a dataframe with their names,
 # countries, continents alongside the other columns we will need.
@@ -7,7 +7,7 @@
 #If the city graph files are already downloaded, then they must be on a
 # directory "./Data/Country/City" and the Boolean below must be True:
 
-downloaded = False
+downloaded = False  #RMK: True state not fully worked yet!
 
 #############################################################################
 
