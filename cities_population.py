@@ -12,7 +12,7 @@ import pandas as pd
 
 #We need the list of cities population and the dataframe:
     
-population_file = "UNdata_Export_20181015_151853664.csv"
+population_file = "UNdata_Export_20200804_201754319.csv"
 cities_df_file = "cities.csv"
 
 #We also need a .csv file that relates names in our dataframe to the ones by
@@ -34,9 +34,13 @@ def check_pop(cities_df):
 
 #The following function checks whether a city has an alternative name as for
 # the UN data. If it does, it returns this other name.
-def check_altname(city, altnames_df):
-    if city in altnames_df["currName"]:
-        altname = altnames_df[altnames_df['currName']==city]
+def check_altname(city, altnames_df, verbose):
+    city = city.replace("_", " ")
+    if city in altnames_df.currName.values:
+        df_temp = altnames_df.loc[altnames_df['currName'] == city, 'altName']
+        altname = df_temp.tolist()[0]
+        if verbose == True:
+            print("Found alternative name:", altname)
         return altname
     else:
         return city
@@ -44,16 +48,15 @@ def check_altname(city, altnames_df):
 #The follow function gets and cleans the population dataframe from the UN
 # list. We will take only the overallpopulation, not the one divided by sex.
 def get_population_df(population_file):
-    pop_df_raw = pd.read_csv(population_file, delimiter=";")
+    pop_df_raw = pd.read_csv(population_file, delimiter=",")
     population_df = pop_df_raw[pop_df_raw["Sex"] == "Both Sexes"]
     return population_df
 
 #Now a function that, given the name of a city as it is in the UN list, gets
 # its population. Returns a float or None:
-def get_population(city, population_df):
+def get_population(city_name, population_df):
     #First we try the straightforward version. We would like to get all the
     # cells that represent the city, then we will filter them.
-    city_name = city.replace("_", " ")
     city_df = population_df[population_df["City"]==city_name]
     #In case there were no cells, we can still try upper case:
     if len(city_df) == 0:
@@ -96,15 +99,15 @@ def append_population(cities_df, altnames_df, pop_df, verbose=False):
     for city in cities_list:
         if verbose==True:
             print("City:", city)
-        city_name = check_altname(city, altnames_df)
-        pop = get_population(city_name, pop_df)
+        city_pop_name = check_altname(city, altnames_df, verbose)
+        pop = get_population(city_pop_name, pop_df)
         pop_list.append(pop)
         if verbose==True:
             if pop != None:
                 print("Population:", pop)
             else:
                 print("Population not found")
-            print("-"*30)
+            print("-"*60)
     pop_column = pd.DataFrame({'Population': pop_list})
     #reset index: 
     cities_df = cities_df.reset_index(drop=True)
@@ -117,7 +120,7 @@ def append_population(cities_df, altnames_df, pop_df, verbose=False):
 #############################################################################
 
 pop_df = get_population_df(population_file)
-altnames_df = pd.read_csv(altnames_file, delimiter=";")
+altnames_df = pd.read_csv(altnames_file, delimiter=",")
 cities_df = pd.read_csv(cities_df_file)
 
 cities_df_new = append_population(cities_df, altnames_df, pop_df, True)

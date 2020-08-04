@@ -1,55 +1,67 @@
-currName;altName
-Mumbai;Greater Mumbai
-Beijing;BEIJING (PEKING)
-Das es Salaam;Dar es Salaam
-Algiers;ALGIERS (EL DJAZAIR)
-Moscow;MOSKVA
-Saint Petersburg;St. Petersburg
-Kiev;KYIV
-Rome;ROMA
-Bucharest;BUCURESTI
-Warsaw;WARSZAWA
-Milan;Milano
-Belgrade;BEOGRAD (BELGRADE)
-Prague;PRAHA
-Brussels;BRUXELLES (BRUSSEL)
-Naples;Napoli
-Lisbon;LISBOA
-Quebec City;Quebec
-New York;New York (NY)
-Los Angeles;Los Angeles (CA)
-Chicago;Chicago (IL)
-Houston;Houston (TX)
-Boston;Boston (MA)
-Washington;WASHINGTON (DC)
-Mexico City;MEXICO, CIUDAD DE
-Phoenix;Phoenix (AZ)
-Bogota;BOGOTÁ, D.C.
-Busan;Busan (Pusan)
-Isfahan;Esfahan
-Basel;Bale
-Donetsk;Donets'k
-Seville;Sevilla
-Pamplona;Pamplona/Iruña
-Krakow;Kraków
-Venice;Venezia
-Shymkent;Shimkent
-Antwerp;Antwerpen (Anvers)
-Philadelphia;Philadelphia (PA)
-Austin;Austin (TX)
-Las Vegas;Las Vegas (NV)
-Atlanta;Atlanta (GA)
-Miami;Miami (FL)
-Reno;Reno (NV)
-Salt Lake City;Salt Lake City (UT)
-Culiacan;Culiacán Rosales
-Reynosa;Reynosa-Río Bravo
-Belem;Belém
-Sao Luis;Sao Luís
-Maceio;Maceió
-Cuiaba;Cuiabá
-Santa Fe de la Vera Cruz;Santa Fé
-Medellin;Medellín
-Vina del Mar;Viña del Mar
-Yekaterinburg;Ekaterinburg
-New Delhi;Delhi Municipal Corporation (DMC)
+currName,altName
+Algiers,ALGIERS (EL DJAZAIR)
+Ansan,Asan
+Antwerp,Antwerpen (Anvers)
+Athens,ATHINAI
+Atlanta,Atlanta (GA)
+Austin,Austin (TX)
+Basel,Bâle
+Beijing,BEIJING (PEKING)
+Belem,Belém
+Belgrade,BEOGRAD (BELGRADE)
+Bogota,"BOGOTÁ, D.C."
+Boston,Boston (MA)
+Brussels,BRUXELLES (BRUSSEL)
+Bucharest,BUCURESTI
+Busan,Busan (Pusan)
+Cartagena de Indias,Cartagena
+Chicago,Chicago (IL)
+Copenhagen,KOBENHAVN
+Cuiaba,Cuiabá
+Culiacan,Culiacán Rosales
+Das es Salaam,Dar es Salaam
+Donetsk,Donets'k
+Geneva,Genève
+Houston,Houston (TX)
+Isfahan,Esfahan
+Kiev,KYIV
+Krakow,Kraków
+Las Vegas,Las Vegas (NV)
+Lisbon,LISBOA
+Los Angeles,Los Angeles (CA)
+Lucerne,Luzern
+Maceio,Maceió
+Malaga,Málaga
+Malmo,Malmö
+Medellin,Medellín
+Mexico City,"MEXICO, CIUDAD DE"
+Miami,Miami (FL)
+Milan,Milano
+Montreal,Montréal
+Moscow,MOSKVA
+Mumbai,Greater Mumbai
+Munich,München
+Naples,Napoli
+New Delhi,Delhi Municipal Corporation (DMC)
+New York,New York (NY)
+Pamplona,Pamplona/Iruña
+Philadelphia,Philadelphia (PA)
+Phoenix,Phoenix (AZ)
+Prague,PRAHA
+Quebec,Québec
+Reno,Reno (NV)
+Reynosa,Reynosa-Río Bravo
+Rome,ROMA
+Saint Petersburg,St. Petersburg
+Salt Lake City,Salt Lake City (UT)
+Santa Fe de la Vera Cruz,Santa Fé
+Sao Luis,Sao Luís
+Seville,Sevilla
+Shymkent,Shimkent
+Venice,Venezia
+Vienna,WIEN
+Vina del Mar,Viña del Mar
+Warsaw,WARSZAWA
+Washington,WASHINGTON (DC)
+Yekaterinburg,Ekaterinburg
+Zurich,Zürich
